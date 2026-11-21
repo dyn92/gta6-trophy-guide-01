@@ -21,6 +21,12 @@ const ENTRY_NAME = 'Leonida Platinum Atlas';
 const here = fileURLToPath(new URL('.', import.meta.url));
 const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
+// The guide is only whole with its data file: fail loudly here rather than hand in an
+// atlas whose trophies.json went missing between the writing and the running.
+if (!existsSync(join(here, 'app', 'data', 'trophies.json'))) {
+  throw new Error(`${ENTRY_NAME}: app/data/trophies.json is missing — the guide cannot be handed in without its trophy list.`);
+}
+
 mkdirSync(out, { recursive: true });
 cpSync(join(here, 'app'), join(out, 'app'), { recursive: true });
 mkdirSync(join(out, 'screenshots'), { recursive: true });
