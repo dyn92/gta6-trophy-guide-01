@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum Atlas — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI PlayStation 5 trophies: a checklist with saved progress, filters and a spoiler setting, a roadmap to the platinum, the missables flagged, and a cited guide to every trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="brand">
+    <div class="sun" aria-hidden="true"></div>
+    <div class="brand-text">
+      <h1>Leonida Platinum Atlas</h1>
+      <p class="tagline">The offline trophy guide &amp; tracker for Grand Theft Auto VI on PlayStation 5</p>
+      <p class="list-makeup">The official list: <strong>55 trophies</strong> — 1 platinum, 2 gold, 6 silver, 46 bronze</p>
+    </div>
+  </div>
+  <div class="head-stats" aria-label="Your progress">
+    <div class="big-count"><span id="earned-count">0</span><span class="of"> of 55 earned</span></div>
+    <div class="bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55"><div id="bar-fill"></div></div>
+    <p id="grade-line" class="grade-line">Platinum 0/1 · Gold 0/2 · Silver 0/6 · Bronze 0/46</p>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs" aria-label="Views">
+  <button type="button" class="tab active" data-view="guide">Guide &amp; checklist</button>
+  <button type="button" class="tab" data-view="roadmap">Roadmap to the platinum</button>
+  <button type="button" class="tab" data-view="missables">Missables</button>
+  <button type="button" class="tab" data-view="sources">About &amp; sources</button>
+</nav>
+
+<main>
+<section id="view-guide" class="view">
+  <div class="toolbar" aria-label="Checklist tools">
+    <label class="search">Search <input id="search" type="search" placeholder="Trophy, mission, place…"></label>
+    <div class="chips" id="kind-chips" role="group" aria-label="Filter by kind">
+      <button type="button" class="chip active" data-kind="all">All kinds</button>
+      <button type="button" class="chip" data-kind="story">Story</button>
+      <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+      <button type="button" class="chip" data-kind="activities">Activities</button>
+      <button type="button" class="chip" data-kind="missable">⚑ Missable</button>
+    </div>
+    <label>Grade
+      <select id="grade-filter">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label>Show
+      <select id="state-filter">
+        <option value="all">All trophies</option>
+        <option value="earned">Earned</option>
+        <option value="open">Not yet</option>
+      </select>
+    </label>
+    <label class="spoiler-toggle"><input id="spoiler-toggle" type="checkbox"> Hide story spoilers</label>
+    <div class="toolbar-actions">
+      <button type="button" id="export">Export progress</button>
+      <label class="import-btn">Import progress <input id="import" type="file" accept="application/json"></label>
+      <button type="button" id="demo">Load demo progress</button>
+      <button type="button" id="reset">Reset</button>
+    </div>
+  </div>
+
+  <div class="layout">
+    <div class="list-wrap">
+      <p id="list-summary" class="list-summary"></p>
+      <ol id="rows" class="rows"></ol>
+    </div>
+    <aside id="detail" class="detail" aria-label="Trophy guide"></aside>
+  </div>
+</section>
+
+<section id="view-roadmap" class="view" hidden>
+  <div class="page-head">
+    <h2>Roadmap to the platinum</h2>
+    <p>One playthrough, then a clean-up. This roadmap is built from the official trophy descriptions alone — which chapters and missions the trophies name, which collectibles and counts they carry — in the order that wastes the least travel. Stage progress fills in from your checklist.</p>
+  </div>
+  <div id="roadmap-stages"></div>
+</section>
+
+<section id="view-missables" class="view" hidden>
+  <div class="page-head">
+    <h2>Missables &amp; one-chance moments</h2>
+    <p>Most of the list cannot be missed: chapter and mission trophies are completions, and everything else is a count or a free-roam feat you can go back to. Three trophies are different — their official descriptions name a single scene or a single attempt. Until the community confirms a way to repeat them, treat these as one-chance and use a spare save slot around them.</p>
+  </div>
+  <div id="missable-cards"></div>
+  <div class="note-card">
+    <h3>How this list was made</h3>
+    <p>We flagged a trophy only when its official description describes one unrepeatable moment rather than a completion, a count or a place you can revisit. Everything not flagged here is, on the wording of its description, earnable at any time — story trophies included, since each one is simply “complete” a named chapter or mission. If a later patch or a community finding changes that picture, the flag list is the first thing to update.</p>
+  </div>
+</section>
+
+<section id="view-sources" class="view" hidden>
+  <div class="page-head">
+    <h2>About this guide &amp; its sources</h2>
+  </div>
+  <div class="prose">
+    <p><strong>Leonida Platinum Atlas</strong> is a free, open-source, unofficial fan guide. It runs entirely from its own files: open <em>index.html</em> in a desktop browser with the network off and everything — the checklist, the roadmap, this page — still works. Your progress is saved in your browser (localStorage) and can be exported to a file and imported back on another machine.</p>
+    <h3>Where the facts come from</h3>
+    <p>Every trophy's name, official description and grade are PlayStation's, as published in the official Grand Theft Auto VI list on <strong>Exophase</strong> (exophase.com/game/grand-theft-auto-vi-psn/trophies/). Where PlayStation tracks a count for a trophy — 250 stunts, 42 Shooting Range challenges, 100 WAiNK spots — the target shown is the one <strong>PSNProfiles</strong> lists for it (psnprofiles.com/trophies/43531-grand-theft-auto-vi). Each trophy's own guide names these sources again beside it.</p>
+    <h3>What is ours, and what we have not checked</h3>
+    <p>The guide text under each trophy is our own writing, worked out from the official description: what the trophy asks for, where its description points, and when it can be missed. The game launched the week this guide was written and we have not verified every step in play, so each guide says plainly where a place or a step is not yet pinned down rather than inventing one. The roadmap and the missable flags are likewise built from the official descriptions, and the Missables page explains the rule we used. No text here is copied from another guide, and the look is our own — there is no Rockstar Games logo, artwork or game screenshot anywhere in this app.</p>
+    <h3>The spoiler setting</h3>
+    <p>Twenty-eight of the 55 trophies are hidden on PlayStation until earned. Turn on <em>Hide story spoilers</em> in the checklist and every unearned story trophy is masked — name, description and guide — until you tick it off, so you can track the hunt without reading the campaign's beats ahead of time.</p>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <p>Leonida Platinum Atlas — an unofficial fan guide, not affiliated with Rockstar Games or PlayStation. Trophy names and descriptions are PlayStation's. Works offline; your progress never leaves your browser unless you export it.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
